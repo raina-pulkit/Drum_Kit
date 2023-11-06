@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(90deg, #605a56, #9fc1b4, #605a56);
+    background-size: 400% 400%;
+    animation: Animation 2s linear alternate infinite;
+    height: 100vh;
+}
+
+@keyframes Animation { 
+    0%{
+        background-position:0% 50%;
+    }
+    
+    100%{
+        background-position:100% 50%;
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    align-items: center;
+}
+
+.heading{
+    margin-top: 5rem;
+    font-size: 5rem;
+    font-family: 'Noto Serif Old Uyghur', serif;
+    font-weight: 800;
+
+    filter: drop-shadow(0 0 2rem rgb(219, 223, 96));
+
+    text-shadow: 5px 5px #605a56;
+}
+
+.keys{
+    width: 85%;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    gap: 6.5rem;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin-top: 15%;
+}
+
+button{
+    margin: 0;
+    border-width: .1em;
+    border-radius: 5%;
+}
+.drum{
+    transform: scale(4);
+    width: 30px;
+    height: 30px;
+
+    background-color:#ACA16B;
+    color: #6A6896;
+
+    filter: drop-shadow(0 0 10px #AB3632);
+}
+
+.w{
+    background: url("images/crash.png") no-repeat center top;
+    background-size: cover;
+}
+
+.a{
+    background: url("images/kick.png") no-repeat center top;
+    background-size: cover;
+}
+
+.s{
+    background: url("images/snare.png") no-repeat center top;
+    background-size: cover;
+}
+
+.d{
+    background: url("images/tom1.png") no-repeat center top;
+    background-size: cover;
+}
+
+.ArrowUp{
+    background: url("images/tom2.png") no-repeat center top;
+    background-size: cover;
+}
+
+.ArrowLeft{
+    background: url("images/tom3.png") no-repeat center top;
+    background-size: cover;
+}
+
+.ArrowDown{
+    background: url("images/tom4.png") no-repeat center top;
+    background-size: cover;
+}
+
+.ArrowRight{
+    background: url("images/crash.png") no-repeat center top;
+    background-size: cover;
+}
+
+.pressed{
+    box-shadow: 0 3px 4px 0 rgb(8, 231, 220);
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 1140px){
+    .keys{
+        margin-top:15%;
+    }
+}
+
+@media only screen and (max-width: 560px){
+    .heading{
+        transform: scale(0.75);
+        margin-top: 8rem;
+    }
+
+    .keys{
+        transform: scale(0.80);
+    }
+}
+
+@media only screen and (max-width: 465px){
+    .heading{
+        font-size: 4rem;
+    }
+}
